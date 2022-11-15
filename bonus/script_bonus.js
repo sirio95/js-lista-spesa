@@ -3,6 +3,7 @@ let lista_spesa_lenght= listaSpesa.length;
 let i= 0;
 let lista= document.getElementById("lista");
 let spesa= document.getElementById("spesa");
+let new_element = `<input type="text" id="nuovo_elemento"><button id="button_lista" onclick="MyFunction">Inserisci nuovo ingrediente alla lista</button>`;
 
 
 console.log(lista);
@@ -19,11 +20,14 @@ while(i < lista_spesa_lenght){
 }
 
 
+if(i == lista_spesa_lenght - 1){
+    document.getElementById("spesa").append= new_element;
+}
 
 
-
-
-
-
-
+function MyFunction(){
+    var ingredienteN= document.getElementById("nuovo_elemento");
+    var nuovo_ingrediente= ingredienteN.value;
+    listaSpesa.push(nuovo_ingrediente);
+}
 
